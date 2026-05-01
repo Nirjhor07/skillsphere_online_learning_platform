@@ -1,4 +1,5 @@
 import LeftSideHome from "../Components/Home/LeftSideHome/LeftSideHome";
+import PopularCourses from "../Components/Home/popular courses/PopularCourses";
 import RightSideHome from "../Components/Home/RightSideHome/RightSideHome";
 
 export default function Home() {
@@ -7,6 +8,9 @@ export default function Home() {
       <div className="container mx-auto  bg-base-200 gap-7 flex flex-col sm:flex-row sm:items-center justify-center pt-6">
         <LeftSideHome />
         <RightSideHome />
+      </div>
+      <div>
+        <PopularCourses />
       </div>
     </div>
   );
