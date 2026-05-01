@@ -1,24 +1,32 @@
+"use client";
 import { CiPlay1 } from "react-icons/ci";
 import { GoDot } from "react-icons/go";
-
+import { motion } from "framer-motion";
 const LeftSideHome = () => {
   return (
     <div className="flex flex-col space-y-2.5 lg:flex-row-reverse gap-20 items-center">
       {/* Banner Image Optional */}
 
       <div className="space-y-4 text-center lg:text-left">
-        <p className="badge bg-blue-100 p-4 text-blue-700 font-bold border-none">
+        <motion.p
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ repeat: Infinity, duration: 1 }}
+          className="badge bg-blue-100 p-4 text-blue-700 font-bold border-none"
+        >
           <GoDot /> New: Live Courses & Certificates Available
-        </p>
+        </motion.p>
 
         <div className="space-y-4">
           <h1 className="text-4xl lg:text-7xl font-bold leading-tight">
             Upgrade Your
           </h1>
 
-          <h1 className="text-4xl lg:text-7xl font-bold text-blue-600 leading-tight">
+          <motion.h1
+            whileHover={{ scale: 1.1, transition: { duration: 0.1 } }}
+            className="text-4xl lg:text-7xl font-bold text-blue-600 leading-tight"
+          >
             Skills With SkillSphere
-          </h1>
+          </motion.h1>
 
           <p className="py-4 text-[#627382] text-base lg:text-lg">
             Learn from expert instructors with premium online courses,
