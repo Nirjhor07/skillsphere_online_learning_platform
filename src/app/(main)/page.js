@@ -1,3 +1,4 @@
+import LearningTips from "../Components/Home/Learning Tips Section/LearningTips";
 import LeftSideHome from "../Components/Home/LeftSideHome/LeftSideHome";
 import PopularCourses from "../Components/Home/popular courses/PopularCourses";
 import RightSideHome from "../Components/Home/RightSideHome/RightSideHome";
@@ -14,9 +15,12 @@ export default function Home() {
       <div>
         <StatCards></StatCards>
       </div>
+      {/* popular courses */}
       <div className="mt-4">
         <PopularCourses />
       </div>
+      {/* learning tips section */}
+      <LearningTips />
     </div>
   );
 }
