@@ -36,6 +36,7 @@ const Navbar = () => {
             <FaUserCircle />
           </button>
           <button className="btn bg-blue-600 text-base-200">login</button>
+          <button className="btn btn-secondary text-base-200">SignUp</button>
         </div>
       </div>
     </nav>
