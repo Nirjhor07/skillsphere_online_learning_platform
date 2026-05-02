@@ -6,7 +6,7 @@ import TimeManagement from "./TimeManagement";
 
 const LearningTips = () => {
   return (
-    <div className="bg-linear-to-b from-white via-violet-50 to-blue-50 py-16 px-4">
+    <div className="bg-linear-to-b from-violet-50 via-blue-50 py-16 px-4">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center">
