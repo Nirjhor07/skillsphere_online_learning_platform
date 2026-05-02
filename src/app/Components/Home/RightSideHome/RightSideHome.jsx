@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const RightSideHome = () => {
   return (
     <div className="relative">
-      <div className="w-full max-w-md bg-purple-300 mx-auto flex items-center justify-center">
+      <div className="w-full max-w-md bg-linear-to-b from-violet-50 via-blue-50 to-white mx-auto flex items-center justify-center">
         <Image src={Nirjhor} alt="Nirjhor" width={400} height={400} />
       </div>
       <motion.div
