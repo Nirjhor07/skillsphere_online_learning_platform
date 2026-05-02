@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { FaClock, FaStar, FaUser } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const PopularCard = ({ course }) => {
   return (
@@ -96,16 +97,18 @@ const PopularCard = ({ course }) => {
         </motion.p>
 
         {/* Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.55, duration: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="card-actions justify-end mt-3"
-        >
-          <button className="btn btn-primary btn-sm">View Course</button>
-        </motion.div>
+        <Link href={`/coursedetails/${course.id}`}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.55, duration: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="card-actions justify-end mt-3"
+          >
+            <button className="btn btn-primary btn-sm">View Course</button>
+          </motion.div>
+        </Link>
       </div>
     </motion.div>
   );
