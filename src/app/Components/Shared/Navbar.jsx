@@ -1,4 +1,5 @@
 import { FaUserCircle } from "react-icons/fa";
+import ActiveRoute from "./ActiveRoute";
 
 const Navbar = () => {
   return (
@@ -17,16 +18,16 @@ const Navbar = () => {
         {/* Nav Links */}
         <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
           <li className="hover:text-blue-600 cursor-pointer transition">
-            Home
+            <ActiveRoute href={"/"}>Home</ActiveRoute>
           </li>
           <li className="hover:text-blue-600 cursor-pointer transition">
-            Courses
+            <ActiveRoute href={"/courses"}>All Courses</ActiveRoute>
           </li>
           <li className="hover:text-blue-600 cursor-pointer transition">
-            Instructors
+            <ActiveRoute href={"/instructor"}>Instructors</ActiveRoute>
           </li>
           <li className="hover:text-blue-600 cursor-pointer transition">
-            About
+            <ActiveRoute href={"/about"}>About</ActiveRoute>
           </li>
         </ul>
 
