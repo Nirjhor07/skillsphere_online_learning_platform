@@ -2,8 +2,8 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const {
@@ -11,46 +11,31 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleFormFunction = async (data) => {
-    setIsLoading(true);
-    try {
-      const { email, password } = data;
-      const { data: res, error } = await authClient.signIn.email({
-        email: email,
-        password: password,
-        callbackURL: "/",
-      });
-      if (error) {
-        alert(`${error.message}`);
-      }
-      if (res) {
-        alert("Successfully logged in");
-      }
-    } catch (err) {
-      alert("Login failed. Please try again.");
-    } finally {
-      setIsLoading(false);
+    const { email, password } = data;
+    const { data: res, error } = await authClient.signIn.email({
+      email: email,
+      password: password,
+      callbackURL: "/",
+    });
+    if (error) {
+      toast(`${error.message}`);
+    }
+    if (res) {
+      toast("Successfully logged in");
     }
   };
 
   const handleGoogleSignIn = async () => {
-    setIsLoading(true);
-    try {
-      await authClient.signIn.social({
-        provider: "google",
-        callbackURL: "/",
-      });
-    } catch (err) {
-      alert("Google login failed. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
@@ -100,10 +85,9 @@ const LoginPage = () => {
             {/* Login Button */}
             <button
               type="submit"
-              disabled={isLoading}
               className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 rounded-lg transition duration-200 mb-4"
             >
-              {isLoading ? "Signing in..." : "Sign in"}
+              Sign in
             </button>
 
             {/* Google Sign In Button */}
