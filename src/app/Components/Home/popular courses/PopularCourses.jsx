@@ -5,7 +5,7 @@ import PopularCard from "./PopularCard";
 const PopularCourses = async () => {
   const courseData = await fetchPopularCourseData();
   const popCourses = courseData.filter((popC) => popC.popular);
-  console.log(popCourses);
+  // console.log(popCourses);
   return (
     <div className="container mx-auto mt-7">
       <div className="flex justify-center items-center gap-2.5">
