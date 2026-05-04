@@ -1,22 +1,20 @@
 import { fetchPopularCourseData } from "@/lib/fetchFunc";
-import { FaBookOpenReader } from "react-icons/fa6";
-import PopularCard from "./PopularCard";
+import PopularCard from "../popular courses/PopularCard";
 
-const PopularCourses = async () => {
+const NewRelease = async () => {
   const courseData = await fetchPopularCourseData();
-  const popCourses = courseData.filter((popC) => popC.popular);
+  const newRCourses = courseData.filter((newR) => newR.newRelease);
   // console.log(popCourses);
   return (
     <div className="container mx-auto mt-7">
       <div className="flex justify-center items-center gap-2.5">
         <h2 className="text-2xl sm:text-5xl font-bold text-blue-900">
-          Popular Courses
-        </h2>{" "}
-        <FaBookOpenReader size={50} color="#1e3a8a" />
+          New Release Courses
+        </h2>
       </div>
       {/* popular course card */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 py-7">
-        {popCourses.map((course) => (
+        {newRCourses.map((course) => (
           <PopularCard key={course.id} course={course}></PopularCard>
         ))}
       </div>
@@ -24,4 +22,4 @@ const PopularCourses = async () => {
   );
 };
 
-export default PopularCourses;
+export default NewRelease;
