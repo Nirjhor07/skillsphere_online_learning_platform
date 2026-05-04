@@ -2,6 +2,7 @@
 import StatCards from "@/app/Components/Shared/StatCards";
 import { containerVariants, itemVariants } from "@/lib/motionFunctions";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   FaGraduationCap,
   FaUsers,
@@ -175,13 +176,15 @@ const AboutPageContent = () => {
             Join thousands of learners transforming their careers with
             SkillSphere
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-linear-to-b from-violet-600 to-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:shadow-lg transition-all"
-          >
-            Explore Courses
-          </motion.button>
+          <Link href={"/courses"}>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-linear-to-b from-violet-600 to-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:shadow-lg transition-all"
+            >
+              Explore Courses
+            </motion.button>
+          </Link>
         </div>
       </motion.section>
     </div>
