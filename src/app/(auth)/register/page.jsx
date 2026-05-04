@@ -87,6 +87,11 @@ const RegisterPage = () => {
                   required: "Photo URL is required",
                 })}
               />
+              <p className="text-xs text-gray-500 mt-2">
+                Paste the direct URL of your Facebook profile image (e.g.,
+                https://graph.facebook.com/user-id/picture?). Make sure the
+                image is publicly accessible.
+              </p>
               {errors.Photo_Url && (
                 <span className="text-red-500 text-sm mt-1 block">
                   {errors.Photo_Url.message || "Photo URL is required"}
