@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "SkillSphere",
   description: "Online learning platform",
-  icons: {
-    icon: "/favicon.png",
+  openGraph: {
+    title: "SkillSphere",
+    description: "Online learning platform",
   },
 };
 
