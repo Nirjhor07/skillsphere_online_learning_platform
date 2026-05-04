@@ -210,30 +210,30 @@ For questions, issues, or suggestions, please open an issue on the GitHub reposi
 ### Project Structure
 
 ```
-├───app
-│   ├───(auth)
-│   │   ├───login
-│   │   └───register
-│   ├───(main)
-│   │   ├───about
-│   │   ├───coursedetails
-│   │   │   └───[id]
-│   │   ├───courses
-│   │   ├───instructor
-│   │   └───profile
-│   ├───api
-│   │   └───auth
-│   │       └───[...all]
-│   └───Components
-│       ├───Home
-│       │   ├───Learning Tips Section
-│       │   ├───LeftSideHome
-│       │   ├───new realease courses
-│       │   ├───popular courses
-│       │   ├───RightSideHome
-│       │   └───Top Instructor
-│       └───Shared
-├───assets
-│   └───images
-└───lib
++---app
+|   +---(auth)
+|   |   +---login
+|   |   \---register
+|   +---(main)
+|   |   +---about
+|   |   +---coursedetails
+|   |   |   \---[id]
+|   |   +---courses
+|   |   +---instructor
+|   |   \---profile
+|   +---api
+|   |   \---auth
+|   |       \---[...all]
+|   \---Components
+|       +---Home
+|       |   +---Learning Tips Section
+|       |   +---LeftSideHome
+|       |   +---new realease courses
+|       |   +---popular courses
+|       |   +---RightSideHome
+|       |   \---Top Instructor
+|       \---Shared
++---assets
+|   \---images
+\---lib
 ```
