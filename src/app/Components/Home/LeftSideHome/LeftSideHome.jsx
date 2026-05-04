@@ -2,6 +2,7 @@
 import { CiPlay1 } from "react-icons/ci";
 import { GoDot } from "react-icons/go";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const LeftSideHome = () => {
   return (
     <div className="flex flex-col space-y-2.5 lg:flex-row-reverse gap-20 items-center">
@@ -36,9 +37,11 @@ const LeftSideHome = () => {
           </p>
 
           <div className="gap-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start">
-            <button className="btn btn-primary rounded-2xl px-6">
-              Explore Courses
-            </button>
+            <Link href={"/courses"}>
+              <button className="btn btn-primary rounded-2xl px-6">
+                Explore Courses
+              </button>
+            </Link>
 
             <button className="btn btn-outline rounded-2xl px-6">
               <CiPlay1 /> Watch Demo
